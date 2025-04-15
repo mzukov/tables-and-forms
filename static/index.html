@@ -9,7 +9,64 @@
 <main>
     <h1>Найди себе друга!</h1>
 
-    <!--Форму размещай тут-->
+    <form action="/pets/orders" method="POST">
+        <!-- Имя -->
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" placeholder="Например, Алексей" value="Алексей" required><br><br>
+
+        <!-- Тип питомца -->
+        <label for="petType">Тип питомца:</label>
+        <select id="petType" name="petType" required>
+            <option value="dog" selected>Собака</option>
+            <option value="cat">Кошка</option>
+            <option value="parrot">Попугай</option>
+            <option value="hamster">Хомяк</option>
+        </select><br><br>
+
+        <!-- Пол питомца -->
+        <fieldset>
+            <legend>Пол питомца:</legend>
+            <input type="radio" id="boy" name="gender" value="boy" checked>
+            <label for="boy">Мальчик</label>
+            <input type="radio" id="girl" name="gender" value="girl">
+            <label for="girl">Девочка</label>
+            <input type="radio" id="none" name="gender" value="none">
+            <label for="none">Неважно</label>
+        </fieldset><br>
+
+        <!-- Цвет глаз -->
+        <label for="eyeColor">Цвет глаз питомца:</label>
+        <input type="color" id="eyeColor" name="eyeColor" value="#3399ff" required><br><br>
+
+        <!-- Длина хвоста -->
+        <label for="tailLength">Длина хвоста (в см):</label>
+        <input type="number" id="tailLength" name="tailLength" min="0" max="200" value="30" required><br><br>
+
+        <!-- Дата рождения -->
+        <label for="dateOfBirth">Дата рождения питомца:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" value="2022-01-01" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Ваш email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" value="catlover@example.com" required><br><br>
+
+        <!-- Телефон -->
+        <label for="phone">Ваш телефон:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" value="+79991234567" required><br><br>
+
+        <!-- Правила -->
+        <fieldset>
+            <legend>Согласие с правилами</legend>
+            <label>
+                <input type="checkbox" name="rules" value="true" required>
+                Я принимаю правила размещения заявки
+            </label>
+        </fieldset><br>
+
+        <!-- Кнопки -->
+        <button type="submit">Отправить заявку</button>
+        <button type="reset">Сбросить</button>
+    </form>
 
 </main>
 </body>
